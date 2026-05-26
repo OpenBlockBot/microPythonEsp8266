@@ -1,4 +1,4 @@
-const { formatMessage, ArgumentType, BlockType, ProgramModeType, CommonPeripheral } = window.Scratch;
+const {formatMessage, ArgumentType, BlockType, ProgramModeType, CommonPeripheral} = window.Scratch;
 
 const PNPID_LIST = [
     // CH340
@@ -19,13 +19,12 @@ const SERIAL_CONFIG = {
 
 const DIVECE_OPT = {
     type: 'microPython',
-    chip: 'esp8266',
+    fqbn: 'esp8266:esp8266',
     baud: {
         darwin: '460800',
         linux: '460800',
         win32: '921600'
     },
-    firmware: 'microPython-esp8266.bin',
     dtr: false,
     rts: false
 };
@@ -86,18 +85,54 @@ class OpenBlockMicroPythonEsp8266Device {
 
     get PINS_MENU () {
         return [
-            { text: 'GPIO0', value: Pins.GPIO0 },
-            { text: 'GPIO1', value: Pins.GPIO1 },
-            { text: 'GPIO2', value: Pins.GPIO2 },
-            { text: 'GPIO3', value: Pins.GPIO3 },
-            { text: 'GPIO4', value: Pins.GPIO4 },
-            { text: 'GPIO5', value: Pins.GPIO5 },
-            { text: 'GPIO12', value: Pins.GPIO12 },
-            { text: 'GPIO13', value: Pins.GPIO13 },
-            { text: 'GPIO14', value: Pins.GPIO14 },
-            { text: 'GPIO15', value: Pins.GPIO15 },
-            { text: 'GPIO16', value: Pins.GPIO16 },
-            { text: 'A0', value: Pins.A0 }
+            {
+                text: 'GPIO0',
+                value: Pins.GPIO0
+            },
+            {
+                text: 'GPIO1',
+                value: Pins.GPIO1
+            },
+            {
+                text: 'GPIO2',
+                value: Pins.GPIO2
+            },
+            {
+                text: 'GPIO3',
+                value: Pins.GPIO3
+            },
+            {
+                text: 'GPIO4',
+                value: Pins.GPIO4
+            },
+            {
+                text: 'GPIO5',
+                value: Pins.GPIO5
+            },
+            {
+                text: 'GPIO12',
+                value: Pins.GPIO12
+            },
+            {
+                text: 'GPIO13',
+                value: Pins.GPIO13
+            },
+            {
+                text: 'GPIO14',
+                value: Pins.GPIO14
+            },
+            {
+                text: 'GPIO15',
+                value: Pins.GPIO15
+            },
+            {
+                text: 'GPIO16',
+                value: Pins.GPIO16
+            },
+            {
+                text: 'A0',
+                value: Pins.A0
+            }
         ];
     }
 
@@ -132,17 +167,50 @@ class OpenBlockMicroPythonEsp8266Device {
 
     get DIGITAL_PINS_MENU () {
         return [
-            { text: 'GPIO0', value: Pins.GPIO0 },
-            { text: 'GPIO1', value: Pins.GPIO1 },
-            { text: 'GPIO2', value: Pins.GPIO2 },
-            { text: 'GPIO3', value: Pins.GPIO3 },
-            { text: 'GPIO4', value: Pins.GPIO4 },
-            { text: 'GPIO5', value: Pins.GPIO5 },
-            { text: 'GPIO12', value: Pins.GPIO12 },
-            { text: 'GPIO13', value: Pins.GPIO13 },
-            { text: 'GPIO14', value: Pins.GPIO14 },
-            { text: 'GPIO15', value: Pins.GPIO15 },
-            { text: 'GPIO16', value: Pins.GPIO16 }
+            {
+                text: 'GPIO0',
+                value: Pins.GPIO0
+            },
+            {
+                text: 'GPIO1',
+                value: Pins.GPIO1
+            },
+            {
+                text: 'GPIO2',
+                value: Pins.GPIO2
+            },
+            {
+                text: 'GPIO3',
+                value: Pins.GPIO3
+            },
+            {
+                text: 'GPIO4',
+                value: Pins.GPIO4
+            },
+            {
+                text: 'GPIO5',
+                value: Pins.GPIO5
+            },
+            {
+                text: 'GPIO12',
+                value: Pins.GPIO12
+            },
+            {
+                text: 'GPIO13',
+                value: Pins.GPIO13
+            },
+            {
+                text: 'GPIO14',
+                value: Pins.GPIO14
+            },
+            {
+                text: 'GPIO15',
+                value: Pins.GPIO15
+            },
+            {
+                text: 'GPIO16',
+                value: Pins.GPIO16
+            }
         ];
     }
 
@@ -152,7 +220,10 @@ class OpenBlockMicroPythonEsp8266Device {
 
     get ANALOG_PINS_MENU () {
         return [
-            { text: 'A0', value: Pins.A0 }
+            {
+                text: 'A0',
+                value: Pins.A0
+            }
         ];
     }
 
@@ -162,16 +233,46 @@ class OpenBlockMicroPythonEsp8266Device {
 
     get PWM_AND_INTERRUPT_PINS_MENU () {
         return [
-            { text: 'GPIO0', value: Pins.GPIO0 },
-            { text: 'GPIO1', value: Pins.GPIO1 },
-            { text: 'GPIO2', value: Pins.GPIO2 },
-            { text: 'GPIO3', value: Pins.GPIO3 },
-            { text: 'GPIO4', value: Pins.GPIO4 },
-            { text: 'GPIO5', value: Pins.GPIO5 },
-            { text: 'GPIO12', value: Pins.GPIO12 },
-            { text: 'GPIO13', value: Pins.GPIO13 },
-            { text: 'GPIO14', value: Pins.GPIO14 },
-            { text: 'GPIO15', value: Pins.GPIO15 }
+            {
+                text: 'GPIO0',
+                value: Pins.GPIO0
+            },
+            {
+                text: 'GPIO1',
+                value: Pins.GPIO1
+            },
+            {
+                text: 'GPIO2',
+                value: Pins.GPIO2
+            },
+            {
+                text: 'GPIO3',
+                value: Pins.GPIO3
+            },
+            {
+                text: 'GPIO4',
+                value: Pins.GPIO4
+            },
+            {
+                text: 'GPIO5',
+                value: Pins.GPIO5
+            },
+            {
+                text: 'GPIO12',
+                value: Pins.GPIO12
+            },
+            {
+                text: 'GPIO13',
+                value: Pins.GPIO13
+            },
+            {
+                text: 'GPIO14',
+                value: Pins.GPIO14
+            },
+            {
+                text: 'GPIO15',
+                value: Pins.GPIO15
+            }
         ];
     }
 
@@ -349,7 +450,7 @@ class OpenBlockMicroPythonEsp8266Device {
                         }
                     },
                     {
-                        opcode: 'esp8266ReadAnalogPin',
+                        opcode: 'readAnalogPin',
                         text: formatMessage({
                             id: 'microPythonEsp8266.pins.readAnalogPin',
                             default: 'read analog pin [PIN]',
@@ -389,7 +490,7 @@ class OpenBlockMicroPythonEsp8266Device {
                     {
                         opcode: 'attachInterrupt',
                         text: formatMessage({
-                            id: 'microPythonEsp8266.pins.esp8266AttachInterrupt',
+                            id: 'microPythonEsp8266.pins.attachInterrupt',
                             default: 'attach interrupt pin [PIN] mode [MODE] executes',
                             description: 'MicroPython esp8266 attach interrupt'
                         }),
@@ -407,17 +508,53 @@ class OpenBlockMicroPythonEsp8266Device {
                             }
                         },
                         programMode: [ProgramModeType.UPLOAD]
+                    },
+                    // Legacy aliases, kept for backward compatibility.
+                    {
+                        opcode: 'esp8266ReadAnalogPin',
+                        text: formatMessage({
+                            id: 'microPythonEsp8266.pins.readAnalogPin',
+                            default: 'read analog pin [PIN]',
+                            description: 'MicroPython esp8266 read analog pin'
+                        }),
+                        blockType: BlockType.REPORTER,
+                        arguments: {
+                            PIN: {
+                                type: ArgumentType.STRING,
+                                menu: 'analogPins',
+                                defaultValue: this.DEFAULT_ANALOG_PIN
+                            }
+                        },
+                        hideFromPalette: true,
+                        func: 'readAnalogPin'
                     }
                 ],
                 menus: {
-                    pins: { items: this.PINS_MENU },
-                    mode: { items: this.MODE_MENU },
-                    digitalPins: { items: this.DIGITAL_PINS_MENU },
-                    analogPins: { items: this.ANALOG_PINS_MENU },
-                    level: { acceptReporters: true, items: this.LEVEL_MENU },
-                    pwmPins: { items: this.PWM_AND_INTERRUPT_PINS_MENU },
-                    interruptPins: { items: this.PWM_AND_INTERRUPT_PINS_MENU },
-                    interruptMode: { items: this.INTERRUP_MODE_MENU }
+                    pins: {
+                        items: this.PINS_MENU
+                    },
+                    mode: {
+                        items: this.MODE_MENU
+                    },
+                    digitalPins: {
+                        items: this.DIGITAL_PINS_MENU
+                    },
+                    analogPins: {
+                        items: this.ANALOG_PINS_MENU
+                    },
+                    level: {
+                        acceptReporters: true,
+                        items: this.LEVEL_MENU
+                    },
+                    pwmPins: {
+                        items: this.PWM_AND_INTERRUPT_PINS_MENU
+                    },
+                    interruptPins: {
+                        items: this.PWM_AND_INTERRUPT_PINS_MENU
+                    },
+                    interruptMode: {
+                        items: this.INTERRUP_MODE_MENU
+                    }
                 }
             },
             {
@@ -471,7 +608,9 @@ class OpenBlockMicroPythonEsp8266Device {
                     }
                 ],
                 menus: {
-                    eol: { items: this.EOL_MENU }
+                    eol: {
+                        items: this.EOL_MENU
+                    }
                 }
             }
         ];

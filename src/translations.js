@@ -18,16 +18,64 @@
 export default {
     'interface': {
         'en': {
-            'microPythonEsp8266.description': 'Low-cost Wi-Fi SOC control board.'
+            'microPythonEsp8266.description': 'Low-cost Wi-Fi SOC control board.',
+            'microPythonEsp8266.examples.blink.name': 'Blink',
+            'microPythonEsp8266.examples.blink.description': 'Make the on-board LED blink.',
+            'microPythonEsp8266.examples.button.name': 'Button',
+            'microPythonEsp8266.examples.button.description': 'Light up the LED while a push button is pressed.',
+            'microPythonEsp8266.examples.fade.name': 'Fade',
+            'microPythonEsp8266.examples.fade.description': 'Smoothly fade an LED in and out using PWM.',
+            'microPythonEsp8266.examples.knob.name': 'Knob',
+            'microPythonEsp8266.examples.knob.description': 'Control LED brightness with a potentiometer.',
+            'microPythonEsp8266.examples.servoSweep.name': 'Servo Sweep',
+            'microPythonEsp8266.examples.servoSweep.description': 'Sweep a servo back and forth between 0 and 180 degrees.',
+            'microPythonEsp8266.examples.consolePrint.name': 'Console Print',
+            'microPythonEsp8266.examples.consolePrint.description': 'Print messages to the terminal.'
         },
         'ru': {
-            'microPythonEsp8266.description': 'Недорогая плата Wi-Fi  для управления'
+            'microPythonEsp8266.description': 'Недорогая плата Wi-Fi  для управления',
+            'microPythonEsp8266.examples.blink.name': 'Мигание',
+            'microPythonEsp8266.examples.blink.description': 'Заставьте встроенный светодиод мигать.',
+            'microPythonEsp8266.examples.button.name': 'Кнопка',
+            'microPythonEsp8266.examples.button.description': 'Зажигайте светодиод, пока нажата кнопка.',
+            'microPythonEsp8266.examples.fade.name': 'Плавное затухание',
+            'microPythonEsp8266.examples.fade.description': 'Плавное затухание светодиода с помощью ШИМ.',
+            'microPythonEsp8266.examples.knob.name': 'Регулятор',
+            'microPythonEsp8266.examples.knob.description': 'Регулировка яркости светодиода с помощью потенциометра.',
+            'microPythonEsp8266.examples.servoSweep.name': 'Развертка серво',
+            'microPythonEsp8266.examples.servoSweep.description': 'Поворот серво вперед и назад между 0° и 180°.',
+            'microPythonEsp8266.examples.consolePrint.name': 'Печать в консоль',
+            'microPythonEsp8266.examples.consolePrint.description': 'Печать сообщений в терминал.'
         },
         'zh-cn': {
-            'microPythonEsp8266.description': '低功耗 Wi-Fi SOC 控制板。'
+            'microPythonEsp8266.description': '低功耗 Wi-Fi SOC 控制板。',
+            'microPythonEsp8266.examples.blink.name': '闪烁',
+            'microPythonEsp8266.examples.blink.description': '让板载 LED 闪烁。',
+            'microPythonEsp8266.examples.button.name': '按键',
+            'microPythonEsp8266.examples.button.description': '按住按键时点亮 LED。',
+            'microPythonEsp8266.examples.fade.name': '呼吸灯',
+            'microPythonEsp8266.examples.fade.description': '用 PWM 让 LED 缓缓变亮再渐渐变暗。',
+            'microPythonEsp8266.examples.knob.name': '电位器调光',
+            'microPythonEsp8266.examples.knob.description': '用电位器调节 LED 的亮度。',
+            'microPythonEsp8266.examples.servoSweep.name': '舵机来回扫描',
+            'microPythonEsp8266.examples.servoSweep.description': '让舵机在 0° 到 180° 之间来回转动。',
+            'microPythonEsp8266.examples.consolePrint.name': '控制台输出',
+            'microPythonEsp8266.examples.consolePrint.description': '把消息打印到终端。'
         },
         'zh-tw': {
-            'microPythonEsp8266.description': '低功耗 Wi-Fi SOC 控制板。'
+            'microPythonEsp8266.description': '低功耗 Wi-Fi SOC 控制板。',
+            'microPythonEsp8266.examples.blink.name': '閃爍',
+            'microPythonEsp8266.examples.blink.description': '讓板載 LED 閃爍。',
+            'microPythonEsp8266.examples.button.name': '按鍵',
+            'microPythonEsp8266.examples.button.description': '按住按鍵時點亮 LED。',
+            'microPythonEsp8266.examples.fade.name': '呼吸燈',
+            'microPythonEsp8266.examples.fade.description': '用 PWM 讓 LED 緩緩變亮再漸漸變暗。',
+            'microPythonEsp8266.examples.knob.name': '電位器調光',
+            'microPythonEsp8266.examples.knob.description': '用電位器調節 LED 的亮度。',
+            'microPythonEsp8266.examples.servoSweep.name': '舵機來回掃描',
+            'microPythonEsp8266.examples.servoSweep.description': '讓舵機在 0° 到 180° 之間來回轉動。',
+            'microPythonEsp8266.examples.consolePrint.name': '終端輸出',
+            'microPythonEsp8266.examples.consolePrint.description': '將訊息列印到終端。'
         }
     },
     'extensions': {
@@ -49,7 +97,7 @@ export default {
             'microPythonEsp8266.pins.readDigitalPin': 'read digital pin [PIN]',
             'microPythonEsp8266.pins.readAnalogPin': 'read analog pin [PIN]',
             'microPythonEsp8266.pins.setServoOutput': 'set servo pin [PIN] out [OUT]',
-            'microPythonEsp8266.pins.esp8266AttachInterrupt': 'attach interrupt pin [PIN] mode [MODE] executes',
+            'microPythonEsp8266.pins.attachInterrupt': 'attach interrupt pin [PIN] mode [MODE] executes',
             'microPythonEsp8266.category.console': 'Console',
             'microPythonEsp8266.console.consolePrint': 'print [TEXT] [EOL]',
             'microPythonEsp8266.console.consoleInput': 'prompt [TEXT] and read input'
@@ -72,7 +120,7 @@ export default {
             'microPythonEsp8266.pins.readDigitalPin': 'read digital pin [PIN]',
             'microPythonEsp8266.pins.readAnalogPin': 'read analog pin [PIN]',
             'microPythonEsp8266.pins.setServoOutput': 'set servo pin [PIN] out [OUT]',
-            'microPythonEsp8266.pins.esp8266AttachInterrupt': 'attach interrupt pin [PIN] mode [MODE] executes',
+            'microPythonEsp8266.pins.attachInterrupt': 'attach interrupt pin [PIN] mode [MODE] executes',
             'microPythonEsp8266.category.console': 'Console',
             'microPythonEsp8266.console.consolePrint': 'print [TEXT] [EOL]',
             'microPythonEsp8266.console.consoleInput': 'prompt [TEXT] and read input'
@@ -95,7 +143,7 @@ export default {
             'microPythonEsp8266.pins.readDigitalPin': '读取数字引脚 [PIN]',
             'microPythonEsp8266.pins.readAnalogPin': '读取模拟引脚 [PIN]',
             'microPythonEsp8266.pins.setServoOutput': '设置舵机引脚 [PIN] 输出为 [OUT]',
-            'microPythonEsp8266.pins.esp8266AttachInterrupt': '当引脚 [PIN] 检测到 [MODE] 时执行',
+            'microPythonEsp8266.pins.attachInterrupt': '当引脚 [PIN] 检测到 [MODE] 时执行',
             'microPythonEsp8266.category.console': '串口',
             'microPythonEsp8266.console.consolePrint': '打印 [TEXT] [EOL]',
             'microPythonEsp8266.console.consoleInput': '提示 [TEXT] 并读取输入'
@@ -118,7 +166,7 @@ export default {
             'microPythonEsp8266.pins.readDigitalPin': '讀取數位引腳 [PIN]',
             'microPythonEsp8266.pins.readAnalogPin': '讀取類比引腳 [PIN]',
             'microPythonEsp8266.pins.setServoOutput': '設定伺服引腳 [PIN] 輸出為 [OUT]',
-            'microPythonEsp8266.pins.esp8266AttachInterrupt': '當引腳 [PIN] 偵測到 [MODE] 時執行',
+            'microPythonEsp8266.pins.attachInterrupt': '當引腳 [PIN] 偵測到 [MODE] 時執行',
             'microPythonEsp8266.category.console': '串列',
             'microPythonEsp8266.console.consolePrint': '印出 [TEXT] [EOL]',
             'microPythonEsp8266.console.consoleInput': '提示 [TEXT] 並讀取輸入'

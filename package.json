@@ -1,6 +1,6 @@
 {
   "name": "micropython-esp8266",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "ArthurZheng",
   "license": "MIT",
   "repository": {
@@ -22,6 +22,9 @@
   "openblock": {
     "name": "Esp8266",
     "deviceId": "microPythonEsp8266",
+    "arch": [
+      "microPython-esp8266"
+    ],
     "manufactor": "espressif",
     "learnMore": "https://www.espressif.com/en/products/socs/esp8266",
     "type": "microPython",
@@ -43,15 +46,116 @@
     "main": "./src/microPythonEsp8266.js",
     "generator": "./src/generator.js",
     "translations": "./src/translations.js",
-    "programMode": ["upload"],
-    "tags": ["microPython"],
+    "programMode": [
+      "upload"
+    ],
+    "tags": [
+      "microPython"
+    ],
     "helpLink": "https://wiki.openblock.cc/general-hardware-guidelines/boards/esp8266",
-    "libraries": "./libraries",
     "firmwares": [
       {
         "id": "standard",
         "name": "MicroPython Standard",
-        "file": "./firmwares/microPython-esp8266.bin"
+        "file": "./firmwares/ESP8266_GENERIC-20260406-v1.28.0.bin"
+      }
+    ],
+    "examples": [
+      {
+        "id": "blink",
+        "name": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.blink.name",
+            "default": "Blink"
+          }
+        },
+        "description": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.blink.description",
+            "default": "Make the on-board LED blink."
+          }
+        },
+        "file": "./examples/blink.ob"
+      },
+      {
+        "id": "button",
+        "name": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.button.name",
+            "default": "Button"
+          }
+        },
+        "description": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.button.description",
+            "default": "Light up the LED while a push button is pressed."
+          }
+        },
+        "file": "./examples/button.ob"
+      },
+      {
+        "id": "fade",
+        "name": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.fade.name",
+            "default": "Fade"
+          }
+        },
+        "description": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.fade.description",
+            "default": "Smoothly fade an LED in and out using PWM."
+          }
+        },
+        "file": "./examples/fade.ob"
+      },
+      {
+        "id": "knob",
+        "name": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.knob.name",
+            "default": "Knob"
+          }
+        },
+        "description": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.knob.description",
+            "default": "Control LED brightness with a potentiometer."
+          }
+        },
+        "file": "./examples/knob.ob"
+      },
+      {
+        "id": "servoSweep",
+        "name": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.servoSweep.name",
+            "default": "Servo Sweep"
+          }
+        },
+        "description": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.servoSweep.description",
+            "default": "Sweep a servo back and forth between 0 and 180 degrees."
+          }
+        },
+        "file": "./examples/servoSweep.ob"
+      },
+      {
+        "id": "consolePrint",
+        "name": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.consolePrint.name",
+            "default": "Console Print"
+          }
+        },
+        "description": {
+          "formatMessage": {
+            "id": "microPythonEsp8266.examples.consolePrint.description",
+            "default": "Print messages to the terminal."
+          }
+        },
+        "file": "./examples/consolePrint.ob"
       }
     ]
   },
